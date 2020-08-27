@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>User Information Form</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <h1><a class="navbar-brand" href="#">Lease Rent Prediction</a></h1>
+
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <!-- This is the actual code that creates the "hamburger icon" -->
+        <!-- The data-target grabs ids to put into the icon -->
+        </div>
+      </nav>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Fill the form</h1>
+    <p>*We don't save any information</p>
+<form action="" method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="Submit" name="submit" value="Submit"/>
+</form>
+</div>
+</div>
+<center>
+{% if submitbutton == "Submit" %}
+<h1>Price is:Rs.{{cost}}</h1>
+{% endif %}
+</center>
+</body>
+</html>
